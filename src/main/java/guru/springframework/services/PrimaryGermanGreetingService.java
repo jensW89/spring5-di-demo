@@ -4,15 +4,17 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
+import java.sql.SQLOutput;
+
 /**
- * creted by jensW89
+ * created by jensW89
  */
 @Service
 @Primary
-@Profile({"en", "default"})
-public class PrimaryGreetingService implements GreetingService {
+@Profile("de")
+public class PrimaryGermanGreetingService implements GreetingService {
     @Override
     public String sayGreeting() {
-        return "Hello - primary greeting service";
+        return "primärer Grüßdienst";
     }
 }
